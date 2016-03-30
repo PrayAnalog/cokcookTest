@@ -1,0 +1,72 @@
+body {
+	background: white no-repeat left top;
+	text-align: center;
+}
+
+img {
+	display: inline-block;
+}
+
+.header {
+	margin: -10px;
+	background-image: url('../cooks/intro_image.jpg');
+	background-position: center top;
+	background-size: cover;
+	height: 600px;
+	background-opacity: 0.8;
+}
+
+.body {
+
+}
+
+.contents {
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	height: auto;
+	margin-top: 100px;
+	margin-bottom: 40px;
+	padding: 30px;
+	padding-top: 100px;
+	border: 2px groove gray;
+	border-width: 1px;
+	border-radius: 10px;
+	width: 1000px;
+}
+
+.content {
+	width: 280px;
+	height: 450px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 23px;
+	margin-right: 23px;
+	border: 1px groove gray;
+	display: inline-block;
+	border-radius: 10px;
+}
+
+.cook {
+	margin: 5px;
+	border: 5px solid #FFF;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+.food-information {
+}
+
+.foodname {
+	font-family: Lato, sans-serif;
+	font-size: 14pt;
+}
+
+.chefname {
+	font-family: times, serif;
+	font-size: 14pt;
+}

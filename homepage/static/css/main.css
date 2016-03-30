@@ -1,0 +1,12 @@
+.blackstars {
+	display:inline-block;
+	background-image:url('../../static/image/blackstars.png');
+	height: 21px;
+	width: 100px;
+}
+
+.yellowstars {
+	display: block;
+	background-image:url('../../static/image/yellowstars.png');
+	height: 21px;
+}
