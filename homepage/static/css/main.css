@@ -10,3 +10,28 @@
 	background-image:url('../../static/image/yellowstars.png');
 	height: 21px;
 }
+
+.name {
+    display:inline-block;
+    width: 200px;
+    height: 100px;
+}
+
+.body {
+    padding-top: 60px;
+    background-color: #CCC;
+}
+
+.col-lg-4 {
+    background-color: #FFF;
+    height: 400px;
+}
+
+.col-explanation {
+    margin-top: 10px;
+    height: 150px;
+}
+
+.col-bottom {
+
+}

@@ -6,14 +6,13 @@
 	{% for food in food_list_for_sale %}
 		<div class="col-lg-4">
 		<img src="{{ food.image_url }}" alt="Generic placeholder image" width="320" height="220" />
-		<h2><img class="img-circle" style="display:inline;" src="{{ food.get_chef_image_url }}" alt="Chef image" width="100" height="100" />
-		<div class="name" style="display:inline-block;">{{ food.name }}<br /><h3>{{ food.get_chef_name }}</h3></div></h2>
-		<p>{{ food.explanation }}</p>
-		<div class="blackstars"><div class="yellowstars" style="width:{% widthratio food.stars 1 20 %}%;"></div></div>({{ food.star_count }})
-		<a class="btn btn-default" style="display:inline-block; margin-right:10px;" href="{% url 'homepage:detail' food.id %}" role="button">Get the food &raquo;</a>
+		<img class="img-circle" style="display:inline; margin-top:10px;" src="{{ food.get_chef_image_url }}" alt="Chef image" width="100" height="100" />
+		<div class="name" style="display:inline-block;"><h3 style="margin-top:10px;">{{ food.name }}</h3><h4 style="margin-top:10px;">{{ food.get_chef_name }}</h4></div>
+		<!-- div class="col-explanation"><p>{{ food.explanation }}</p></div -->
+		<div class="col-bottom"><div class="blackstars"><div class="yellowstars" style="width:{% widthratio food.stars 1 20 %}%;"></div></div>({{ food.star_count }})
+		<a class="btn btn-default" style="display:inline-block; margin-right:10px;" href="{% url 'homepage:detail' food.id %}" role="button">Get the food &raquo;</a></div>
 		</div><!-- /.col-lg-4 -->
 	{% endfor %}
 {% endif %}
-</div>
 {% endblock %}
 

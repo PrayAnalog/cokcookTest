@@ -124,13 +124,16 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
+    <div class="body">
 
+    <div class="container marketing">
+        <div class="row">
       <!-- Three columns of text below the carousel -->
 		  {% block content %}
 		  {% endblock %}
 
 
+        </div> <!-- /.row -->
 	  <hr class="featurette-divider">
       
 	  <!-- FOOTER -->
@@ -140,7 +143,8 @@
       </footer>
 
     </div><!-- /.container -->
-
+    
+    </div><!-- /.body -->
 
   </body>
 </html>

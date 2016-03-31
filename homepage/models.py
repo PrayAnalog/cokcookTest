@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*- 
+
+
 # This is an auto-generated Django model module.
 # You'll have to do the following manually to clean this up:
 #   * Rearrange models' order
@@ -31,6 +34,7 @@ class AuthUser(models.Model):
 
 class Chef(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, primary_key=True)
+    nickname = models.CharField(max_length=45, blank=True, null=True)
     explanation = models.TextField(db_column='explanation', blank=True, null=True)  # Field name made lowercase.
     age = models.IntegerField(db_column='age', blank=True, null=True)  # Field name made lowercase.
     gender = models.CharField(db_column='gender', max_length=10, blank=True, null=True)  # Field name made lowercase.
@@ -43,9 +47,9 @@ class Chef(models.Model):
 
 class Deliverer(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, primary_key=True)
-    deliverer_image_url = models.CharField(db_column='deliverer_image_url', max_length=255, blank=True, null=True)  # Field name made lowercase.
-    deliverer_phone_number = models.IntegerField(db_column='deliverer_phone_number', blank=True, null=True)  # Field name made lowercase.
-    deliverer_feeling = models.TextField(db_column='deliverer_feeling', blank=True, null=True)  # Field name made lowercase.
+    image_url = models.CharField(db_column='image_url', max_length=255, blank=True, null=True)  # Field name made lowercase.
+    phone_number = models.IntegerField(db_column='phone_number', blank=True, null=True)  # Field name made lowercase.
+    feeling = models.TextField(db_column='feeling', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         db_table = 'deliverer'
@@ -70,7 +74,7 @@ class Food(models.Model):
 		return get_object_or_404(Chef, user=self.chef).image_url
 
     def get_chef_name(self):
-		return get_object_or_404(Chef, user=self.chef).user.first_name
+		return get_object_or_404(Chef, user=self.chef).nickname
 
     class Meta:
         db_table = 'food'
